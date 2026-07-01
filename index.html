@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Altai Jet Boat — Premium jet boat tours through the breathtaking landscapes of the Altai Mountains. Book your adventure today." />
+  <meta property="og:title" content="Altai Jet Boat — Ride the Wild Rivers" />
+  <meta property="og:description" content="Premium jet boat tours through the breathtaking landscapes of the Altai Mountains." />
+  <meta property="og:type" content="website" />
+  <title>Altai Jet Boat — Ride the Wild Rivers</title>
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Google Fonts: Inter -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ================================================================
+       NAVIGATION
+  ================================================================ -->
+  <header>
+    <nav class="nav nav--hero" aria-label="Main navigation">
+      <div class="nav__inner">
+
+        <!-- Logo -->
+        <a href="#" class="nav__logo" aria-label="Altai Jet Boat — Home">
+          <div class="nav__logo-mark" aria-hidden="true">
+            <!-- Boat / wave icon -->
+            <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+              <path d="M2 13 C4 11 7 9 10 11 C13 13 16 11 18 9 L18 14 C16 16 13 14 10 12 C7 10 4 12 2 14 Z"/>
+              <path d="M6 8 L10 4 L14 8" stroke-width="0" fill="white"/>
+            </svg>
+          </div>
+          <span class="nav__logo-text">Altai Jet Boat</span>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="nav__links" role="list">
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#routes">Routes</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#booking">Booking</a></li>
+        </ul>
+
+        <!-- Desktop CTA -->
+        <a href="#booking" class="btn btn--primary nav__cta">Book a Trip</a>
+
+        <!-- Mobile hamburger -->
+        <button
+          class="nav__hamburger"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div class="nav__mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <a href="#experience">Experience</a>
+      <a href="#routes">Routes</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#about">About</a>
+      <a href="#booking">Book a Trip</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================================================================
+         HERO — Full-width video background
+    ================================================================ -->
+    <section class="hero" aria-label="Hero">
+
+      <!-- Media layer -->
+      <div class="hero__media" aria-hidden="true">
+
+        <!-- TODO: Replace with your actual hero video file (MP4/WebM).
+             Recommended: 1920×1080 or higher, 30–60 fps, compressed for web.
+             Use a WebM version for better compression on modern browsers. -->
+        <picture>
+          <!-- Fallback image while video loads or on reduced-motion -->
+          <img
+            src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1920&q=80"
+            alt=""
+            class="hero__image-fallback"
+            fetchpriority="high"
+          />
+        </picture>
+
+        <!-- Hero video (muted autoplay loop) -->
+        <!-- TODO: Replace src with your hosted video assets. Provide both WebM and MP4. -->
+        <video
+          class="hero__video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <!-- <source src="assets/video/hero.webm" type="video/webm" /> -->
+          <!-- <source src="assets/video/hero.mp4"  type="video/mp4"  /> -->
+        </video>
+
+        <div class="hero__overlay"></div>
+      </div>
+
+      <!-- Content -->
+      <div class="hero__content container--wide">
+        <div data-reveal="fade-up">
+          <div class="hero__eyebrow">
+            <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+            Altai Mountains, Russia
+          </div>
+        </div>
+
+        <h1 class="display-xl hero__title" data-reveal="fade-up" data-delay="100">
+          Ride the<br /><em>Wild Rivers</em>
+        </h1>
+
+        <p class="body-lg hero__subtitle" data-reveal="fade-up" data-delay="200">
+          Discover the raw beauty of the Altai Mountains from a jet boat.
+          Pristine turquoise rivers, ancient gorges, and landscapes that
+          take your breath away — experience it all at full throttle.
+        </p>
+
+        <div class="hero__actions" data-reveal="fade-up" data-delay="300">
+          <a href="#booking" class="btn btn--primary btn--lg">Book Your Adventure</a>
+          <a href="#experience" class="btn btn--ghost btn--lg">Explore Routes</a>
+        </div>
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+        Scroll
+      </div>
+
+    </section>
+
+    <!-- ================================================================
+         STATS STRIP
+    ================================================================ -->
+    <section class="stats-strip" aria-label="Key statistics">
+      <div class="container">
+        <div class="stats-strip__inner">
+          <div class="stat-item">
+            <div class="stat-item__number">
+              <span data-count="2400">2400</span><span>+</span>
+            </div>
+            <div class="stat-item__label">Satisfied Guests</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item__number">
+              <span data-count="12">12</span>
+            </div>
+            <div class="stat-item__label">Unique Routes</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item__number">
+              <span data-count="8">8</span>
+            </div>
+            <div class="stat-item__label">Years of Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item__number">
+              <span data-count="4.9">4.9</span><span>★</span>
+            </div>
+            <div class="stat-item__label">Average Rating</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         EXPERIENCE HIGHLIGHTS
+    ================================================================ -->
+    <section class="highlights section" id="experience" aria-labelledby="highlights-title">
+      <div class="container">
+
+        <div class="section-header--center" data-reveal="fade-up">
+          <span class="section-eyebrow">Why Altai Jet Boat</span>
+          <h2 class="display-md section-title" id="highlights-title">
+            The Ultimate Adventure<br />Experience
+          </h2>
+          <p class="body-lg section-lead text-muted">
+            From calm river cruises to high-speed rapids, every trip is
+            crafted for those who seek the extraordinary.
+          </p>
+        </div>
+
+        <div class="grid-3">
+
+          <article class="highlight-card" data-reveal="fade-up" data-delay="100">
+            <div class="highlight-card__media">
+              <!-- TODO: Replace with actual image asset -->
+              <img
+                data-src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&q=75"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                alt="Jet boat racing through narrow Altai gorge"
+                width="800"
+                height="600"
+              />
+            </div>
+            <div class="highlight-card__body">
+              <div class="highlight-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                </svg>
+              </div>
+              <h3 class="highlight-card__title">High-Speed Thrill</h3>
+              <p class="highlight-card__desc">
+                Our jet boats reach speeds up to 80 km/h on flat water,
+                giving you an unmatched adrenaline rush through the most
+                scenic stretches of the Katun River.
+              </p>
+            </div>
+          </article>
+
+          <article class="highlight-card" data-reveal="fade-up" data-delay="200">
+            <div class="highlight-card__media">
+              <!-- TODO: Replace with actual image asset -->
+              <img
+                data-src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=75"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                alt="Panoramic view of Altai mountain landscape"
+                width="800"
+                height="600"
+              />
+            </div>
+            <div class="highlight-card__body">
+              <div class="highlight-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 6s4-2 8 0 8 0 8 0"/>
+                  <path d="M1 12s4-2 8 0 8 0 8 0"/>
+                  <path d="M1 18s4-2 8 0 8 0 8 0"/>
+                </svg>
+              </div>
+              <h3 class="highlight-card__title">Pristine Wilderness</h3>
+              <p class="highlight-card__desc">
+                Navigate rivers accessible only by boat, reaching hidden
+                valleys, ancient petroglyphs, and viewpoints that remain
+                untouched by mass tourism.
+              </p>
+            </div>
+          </article>
+
+          <article class="highlight-card" data-reveal="fade-up" data-delay="300">
+            <div class="highlight-card__media">
+              <!-- TODO: Replace with actual image asset -->
+              <img
+                data-src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=800&q=75"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                alt="Expert guides preparing jet boat equipment"
+                width="800"
+                height="600"
+              />
+            </div>
+            <div class="highlight-card__body">
+              <div class="highlight-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <h3 class="highlight-card__title">Expert Guides & Safety</h3>
+              <p class="highlight-card__desc">
+                Our certified guides have over 15 years on Altai rivers.
+                Every trip includes safety briefings, quality gear, and
+                a team that knows every rapid and eddy.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         FEATURE SPLIT — The Boat
+    ================================================================ -->
+    <section class="feature-split section section--alt" id="about" aria-labelledby="boat-title">
+      <div class="container">
+        <div class="feature-split__inner">
+
+          <div class="feature-split__media" data-reveal="fade-right">
+            <!-- TODO: Replace with actual boat photograph -->
+            <div class="media-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 20l2-8h16l2 8H2z"/>
+                <path d="M6 12V8a6 6 0 0112 0v4"/>
+              </svg>
+              <span>TODO: Insert high-resolution jet boat photograph<br/>(Recommended: 1200×1200px, landscape)</span>
+            </div>
+            <img
+              data-src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=900&q=80"
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              alt="Premium Altai jet boat on clear mountain river"
+              width="900"
+              height="900"
+              style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"
+            />
+            <!-- Floating badge -->
+            <div class="feature-split__media-badge">
+              <div class="feature-split__media-badge-value">80 km/h</div>
+              <div class="feature-split__media-badge-label">Top Speed</div>
+            </div>
+          </div>
+
+          <div class="feature-split__body" data-reveal="fade-left">
+            <span class="section-eyebrow">The Machine</span>
+            <h2 class="display-md section-title" id="boat-title">
+              Built for<br />Extreme Rivers
+            </h2>
+            <p class="body-lg text-muted" style="margin-bottom: 0;">
+              Our custom-built jet boats are engineered for performance
+              in the shallow, fast-moving rivers of the Altai. With no
+              propeller to snag on rocks, they fly through inches of water
+              at speeds that defy imagination.
+            </p>
+
+            <ul class="feature-split__list">
+              <li class="feature-split__list-item">
+                <svg class="feature-split__list-icon" viewBox="0 0 22 22">
+                  <circle cx="11" cy="11" r="11"/>
+                  <path d="M7 11l3 3 5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span><strong>Jet propulsion</strong> — no exposed propeller, safe in shallow rapids</span>
+              </li>
+              <li class="feature-split__list-item">
+                <svg class="feature-split__list-icon" viewBox="0 0 22 22">
+                  <circle cx="11" cy="11" r="11"/>
+                  <path d="M7 11l3 3 5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span><strong>Marine-grade hull</strong> — handles Class IV rapids with ease</span>
+              </li>
+              <li class="feature-split__list-item">
+                <svg class="feature-split__list-icon" viewBox="0 0 22 22">
+                  <circle cx="11" cy="11" r="11"/>
+                  <path d="M7 11l3 3 5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span><strong>8-passenger capacity</strong> — perfect for groups and families</span>
+              </li>
+              <li class="feature-split__list-item">
+                <svg class="feature-split__list-icon" viewBox="0 0 22 22">
+                  <circle cx="11" cy="11" r="11"/>
+                  <path d="M7 11l3 3 5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span><strong>Full safety kit</strong> — life vests, helmets, first aid on every trip</span>
+              </li>
+            </ul>
+
+            <div style="margin-top: var(--space-8);">
+              <a href="#booking" class="btn btn--primary">Book Your Seat</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         FULL-WIDTH MEDIA BANNER #1
+    ================================================================ -->
+    <div class="media-banner media-banner--parallax" aria-hidden="true">
+      <!-- TODO: Replace with a wide cinematic photograph of the Katun River.
+           Recommended dimensions: 2560×1080px or wider (ultrawide / 21:9 crop).
+           High-resolution JPEG or WebP, ≤400KB after optimization. -->
+      <img
+        class="media-banner__media"
+        src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=2400&q=80"
+        alt="Panoramic view of Altai river valley at golden hour"
+        width="2400"
+        height="1012"
+        loading="lazy"
+      />
+      <div class="media-banner__overlay">
+        <div class="media-banner__text">
+          <p class="display-md">Where Sky<br />Meets River</p>
+          <p>The Katun River flows for 688 km through the heart of the Altai mountains — and we know every bend.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================================
+         ROUTES SECTION
+    ================================================================ -->
+    <section class="routes section" id="routes" aria-labelledby="routes-title">
+      <div class="container">
+
+        <div class="section-header--center" data-reveal="fade-up">
+          <span class="section-eyebrow">Adventures</span>
+          <h2 class="display-md section-title" id="routes-title">
+            Choose Your Route
+          </h2>
+          <p class="body-lg section-lead text-muted">
+            From half-day scenic floats to multi-day wilderness expeditions —
+            there's an Altai Jet Boat experience for every type of adventurer.
+          </p>
+        </div>
+
+        <div class="grid-3">
+
+          <article class="route-card" data-reveal="fade-up" data-delay="100">
+            <div class="route-card__media">
+              <!-- TODO: Replace with route-specific photograph -->
+              <img
+                data-src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=700&q=75"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                alt="Katun River cruise route"
+                width="700"
+                height="1050"
+                loading="lazy"
+              />
+            </div>
+            <div class="route-card__overlay"></div>
+            <div class="route-card__body">
+              <span class="route-card__tag">Half Day</span>
+              <h3 class="route-card__title">Katun River Classic</h3>
+              <div class="route-card__meta">
+                <span class="route-card__meta-item">⏱ 4 hours</span>
+                <span class="route-card__meta-item">📍 Gorno-Altaysk</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="route-card" data-reveal="fade-up" data-delay="200">
+            <div class="route-card__media">
+              <!-- TODO: Replace with route-specific photograph -->
+              <img
+                data-src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=700&q=75"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                alt="Chuya River rapids adventure"
+                width="700"
+                height="1050"
+                loading="lazy"
+              />
+            </div>
+            <div class="route-card__overlay"></div>
+            <div class="route-card__body">
+              <span class="route-card__tag">Full Day</span>
+              <h3 class="route-card__title">Chuya Rapids Rush</h3>
+              <div class="route-card__meta">
+                <span class="route-card__meta-item">⏱ 8 hours</span>
+                <span class="route-card__meta-item">📍 Aktash Village</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="route-card" data-reveal="fade-up" data-delay="300">
+            <div class="route-card__media">
+              <!-- TODO: Replace with route-specific photograph -->
+              <img
+                data-src="https://images.unsplash.com/photo-1517685352821-92cf88aee5a5?w=700&q=75"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                alt="Multi-day Altai expedition"
+                width="700"
+                height="1050"
+                loading="lazy"
+              />
+            </div>
+            <div class="route-card__overlay"></div>
+            <div class="route-card__body">
+              <span class="route-card__tag">Expedition</span>
+              <h3 class="route-card__title">Deep Altai Expedition</h3>
+              <div class="route-card__meta">
+                <span class="route-card__meta-item">⏱ 3 Days</span>
+                <span class="route-card__meta-item">📍 Ust-Koksa</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================
+         FEATURE SPLIT — Guides (reversed layout)
+    ================================================================ -->
+    <section class="feature-split section section--alt" aria-labelledby="guides-title">
+      <div class="container">
+        <div class="feature-split__inner feature-split__inner--reverse">
+
+          <div class="feature-split__media" data-reveal="fade-left">
+            <!-- TODO: Replace with photograph of your guide team -->
+            <div class="media-placeholder" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+              </svg>
+              <span>TODO: Insert team / guide photograph<br/>(Recommended: 1200×1200px, portrait or square)</span>
+            </div>
+            <img
+              data-src="https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=900&q=80"
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              alt="Experienced Altai Jet Boat guide team"
+              width="900"
+              height="900"
+              style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"
+            />
+          </div>
+
+          <div class="feature-split__body" data-reveal="fade-right">
+            <span class="section-eyebrow">Our Team</span>
+            <h2 class="display-md section-title" id="guides-title">
+              Local Guides.<br />World-Class Safety.
+            </h2>
+            <p class="body-lg text-muted" style="margin-bottom: 0;">
+              Every guide on our team grew up in the Altai Republic and has spent
+              years reading the rivers. They're your safety officers,
+              storytellers, and wilderness experts all in one.
+            </p>
+
+            <ul class="feature-split__list">
+              <li class="feature-split__list-item">
+                <svg class="feature-split__list-icon" viewBox="0 0 22 22">
+                  <circle cx="11" cy="11" r="11"/>
+                  <path d="M7 11l3 3 5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Certified by the Russian Mountain Rescue Federation</span>
+              </li>
+              <li class="feature-split__list-item">
+                <svg class="feature-split__list-icon" viewBox="0 0 22 22">
+                  <circle cx="11" cy="11" r="11"/>
+                  <path d="M7 11l3 3 5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Fluent in Russian and English</span>
+              </li>
+              <li class="feature-split__list-item">
+                <svg class="feature-split__list-icon" viewBox="0 0 22 22">
+                  <circle cx="11" cy="11" r="11"/>
+                  <path d="M7 11l3 3 5-5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Wilderness first-aid trained</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         IMMERSIVE VIDEO SECTION
+    ================================================================ -->
+    <section class="video-section" id="video" aria-labelledby="video-title">
+      <div class="container">
+
+        <div class="section-header--center" data-reveal="fade-up">
+          <span class="section-eyebrow">In Action</span>
+          <h2 class="display-md section-title" id="video-title">
+            Feel the Power
+          </h2>
+          <p class="body-lg section-lead text-muted">
+            Words don't do it justice. Watch what happens when a
+            jet boat meets the Altai's most demanding rapids.
+          </p>
+        </div>
+
+        <!-- TODO: Replace the YouTube embed ID (VIDEO_ID below) with your actual video ID.
+             Or swap the iframe for a self-hosted <video> element using local MP4/WebM files. -->
+        <div class="video-embed" data-reveal="scale">
+          <!-- Poster image shown before play -->
+          <img
+            class="video-embed__poster"
+            src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1280&q=80"
+            alt="Preview: Altai Jet Boat in action on mountain rapids"
+            loading="lazy"
+          />
+
+          <!-- Play button overlay -->
+          <button class="video-embed__play-btn" aria-label="Play video">
+            <div class="video-embed__play-circle">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 5l11 7-11 7V5z"/>
+              </svg>
+            </div>
+          </button>
+
+          <!-- TODO: Replace VIDEO_ID with your YouTube video ID -->
+          <iframe
+            class="video-embed__iframe"
+            data-src="https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1"
+            title="Altai Jet Boat — Adventure Video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================
+         FULL-WIDTH MEDIA BANNER #2
+    ================================================================ -->
+    <div class="media-banner media-banner--parallax" aria-hidden="true">
+      <!-- TODO: Replace with a cinematic Altai river image (sunrise/sunset preferred).
+           Recommended: 2560×1080px, WebP or optimized JPEG. -->
+      <img
+        class="media-banner__media"
+        src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=2400&q=80"
+        alt="Altai river at sunset with reflections"
+        width="2400"
+        height="1012"
+        loading="lazy"
+      />
+      <div class="media-banner__overlay" style="background: linear-gradient(to left, rgba(0,0,0,.55) 0%, rgba(0,0,0,.1) 60%, transparent 100%);">
+        <div class="media-banner__text" style="margin-left: auto; text-align: right; padding-inline: var(--space-10);">
+          <p class="display-md">Nature Unchanged<br />for Centuries</p>
+          <p>The Altai landscape has looked the same since before recorded history. Come experience true wilderness.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================================
+         GALLERY
+    ================================================================ -->
+    <section class="gallery section" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+
+        <div class="section-header--center" data-reveal="fade-up">
+          <span class="section-eyebrow">Gallery</span>
+          <h2 class="display-md section-title" id="gallery-title">
+            Through the Lens
+          </h2>
+          <p class="body-lg section-lead text-muted">
+            Every trip creates moments worth framing.
+          </p>
+        </div>
+
+        <!-- TODO: Replace all gallery images with your own photography.
+             Minimum recommended sizes: featured (1200×600px), regular (600×600px).
+             Use WebP where possible. Always provide descriptive alt text. -->
+        <div class="gallery__grid">
+
+          <figure class="gallery__item" data-reveal="fade-up">
+            <img
+              data-src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=1200&q=75"
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              alt="Jet boat racing through turquoise Altai river"
+              width="1200"
+              height="600"
+              loading="lazy"
+            />
+            <div class="gallery__item-overlay">
+              <div class="gallery__item-zoom" aria-hidden="true">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+                </svg>
+              </div>
+            </div>
+          </figure>
+
+          <figure class="gallery__item" data-reveal="fade-up" data-delay="100">
+            <img
+              data-src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=75"
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              alt="Snow-capped Altai peaks reflected in calm river"
+              width="600"
+              height="600"
+              loading="lazy"
+            />
+            <div class="gallery__item-overlay">
+              <div class="gallery__item-zoom" aria-hidden="true">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+                </svg>
+              </div>
+            </div>
+          </figure>
+
+          <figure class="gallery__item" data-reveal="fade-up" data-delay="150">
+            <img
+              data-src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=75"
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              alt="Aerial view of winding Altai mountain river valley"
+              width="600"
+              height="600"
+              loading="lazy"
+            />
+            <div class="gallery__item-overlay">
+              <div class="gallery__item-zoom" aria-hidden="true">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+                </svg>
+              </div>
+            </div>
+          </figure>
+
+          <figure class="gallery__item" data-reveal="fade-up" data-delay="200">
+            <img
+              data-src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=75"
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              alt="Forest and river meeting point in Altai wilderness"
+              width="600"
+              height="600"
+              loading="lazy"
+            />
+            <div class="gallery__item-overlay">
+              <div class="gallery__item-zoom" aria-hidden="true">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+                </svg>
+              </div>
+            </div>
+          </figure>
+
+          <figure class="gallery__item" data-reveal="fade-up" data-delay="250">
+            <img
+              data-src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?w=600&q=75"
+              src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+              alt="Crystal clear mountain lake in Altai National Park"
+              width="600"
+              height="600"
+              loading="lazy"
+            />
+            <div class="gallery__item-overlay">
+              <div class="gallery__item-zoom" aria-hidden="true">
+                <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+                </svg>
+              </div>
+            </div>
+          </figure>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================
+         TESTIMONIALS
+    ================================================================ -->
+    <section class="testimonials section section--alt" aria-labelledby="testimonials-title">
+      <div class="container">
+
+        <div class="section-header--center" data-reveal="fade-up">
+          <span class="section-eyebrow">Reviews</span>
+          <h2 class="display-md section-title" id="testimonials-title">
+            What Our Guests Say
+          </h2>
+        </div>
+
+        <div class="grid-3">
+
+          <div class="testimonial-card" data-reveal="fade-up" data-delay="100">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.8l-3 2.9.7 4.1L8 10.7 4.3 12.8l.7-4.1-3-2.9 4.1-.9z"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.8l-3 2.9.7 4.1L8 10.7 4.3 12.8l.7-4.1-3-2.9 4.1-.9z"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.8l-3 2.9.7 4.1L8 10.7 4.3 12.8l.7-4.1-3-2.9 4.1-.9z"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.8l-3 2.9.7 4.1L8 10.7 4.3 12.8l.7-4.1-3-2.9 4.1-.9z"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.8l-3 2.9.7 4.1L8 10.7 4.3 12.8l.7-4.1-3-2.9 4.1-.9z"/></svg>
+            </div>
+            <p class="testimonial-card__quote">
+              "Absolutely life-changing. We did the Chuya Rapids Rush and I've
+              never felt so alive. The guide knew every rock, every current.
+              We got soaked and loved every second of it."
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">M</div>
+              <div>
+                <div class="testimonial-card__name">Mikhail Sorokin</div>
+                <div class="testimonial-card__location">Moscow, Russia</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-reveal="fade-up" data-delay="200">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.8l-3 2.9.7 4.1L8 10.7 4.3 12.8l.7-4.1-3-2.9 4.1-.9z"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.8l-3 2.9.7 4.1L8 10.7 4.3 12.8l.7-4.1-3-2.9 4.1-.9z"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.8l-3 2.9.7 4.1L8 10.7 4.3 12.8l.7-4.1-3-2.9 4.1-.9z"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.8l-3 2.9.7 4.1L8 10.7 4.3 12.8l.7-4.1-3-2.9 4.1-.9z"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.8l-3 2.9.7 4.1L8 10.7 4.3 12.8l.7-4.1-3-2.9 4.1-.9z"/></svg>
+            </div>
+            <p class="testimonial-card__quote">
+              "We brought our two kids (ages 10 and 13) on the Katun Classic.
+              They're still talking about it. The guides were patient, knowledgeable,
+              and made the whole family feel safe throughout."
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">A</div>
+              <div>
+                <div class="testimonial-card__name">Anna Kovaleva</div>
+                <div class="testimonial-card__location">Novosibirsk, Russia</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card" data-reveal="fade-up" data-delay="300">
+            <div class="testimonial-card__stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.8l-3 2.9.7 4.1L8 10.7 4.3 12.8l.7-4.1-3-2.9 4.1-.9z"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.8l-3 2.9.7 4.1L8 10.7 4.3 12.8l.7-4.1-3-2.9 4.1-.9z"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.8l-3 2.9.7 4.1L8 10.7 4.3 12.8l.7-4.1-3-2.9 4.1-.9z"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.8l-3 2.9.7 4.1L8 10.7 4.3 12.8l.7-4.1-3-2.9 4.1-.9z"/></svg>
+              <svg viewBox="0 0 16 16"><path d="M8 1l1.9 3.8L14 5.8l-3 2.9.7 4.1L8 10.7 4.3 12.8l.7-4.1-3-2.9 4.1-.9z"/></svg>
+            </div>
+            <p class="testimonial-card__quote">
+              "The 3-day Deep Altai Expedition exceeded every expectation.
+              Camping under the stars, cooking by the river, and waking up to
+              mountain peaks — this is what travel should feel like."
+            </p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">D</div>
+              <div>
+                <div class="testimonial-card__name">David Reinholt</div>
+                <div class="testimonial-card__location">Berlin, Germany</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================
+         BOOKING / CTA
+    ================================================================ -->
+    <section class="booking-cta" id="booking" aria-labelledby="booking-title">
+      <div class="booking-cta__bg-accent" aria-hidden="true"></div>
+      <div class="container">
+        <div class="booking-cta__inner">
+
+          <span class="booking-cta__eyebrow" data-reveal="fade-up">Limited Availability</span>
+
+          <h2 class="display-lg booking-cta__title" id="booking-title" data-reveal="fade-up" data-delay="100">
+            Your Adventure<br />Starts Here
+          </h2>
+
+          <p class="booking-cta__subtitle" data-reveal="fade-up" data-delay="200">
+            Trips run May through September. Spaces fill up fast — especially
+            for the expedition packages. Reserve your spot today.
+          </p>
+
+          <div class="booking-cta__actions" data-reveal="fade-up" data-delay="300">
+            <!-- TODO: Replace href with your actual booking page or form URL -->
+            <a href="mailto:info@altaijetboat.ru" class="btn btn--primary btn--lg">
+              Book Now
+            </a>
+            <!-- TODO: Replace tel with your actual phone number -->
+            <a href="tel:+73852000000" class="btn btn--ghost btn--lg">
+              Call Us
+            </a>
+          </div>
+
+          <div class="booking-cta__details" data-reveal="fade-up" data-delay="400">
+            <div class="booking-detail">
+              <div class="booking-detail__value">May–<span>Sep</span></div>
+              <div class="booking-detail__label">Season</div>
+            </div>
+            <div class="booking-detail">
+              <div class="booking-detail__value">1–<span>8</span></div>
+              <div class="booking-detail__label">Passengers</div>
+            </div>
+            <div class="booking-detail">
+              <div class="booking-detail__value"><span>Free</span></div>
+              <div class="booking-detail__label">Cancellation 48h</div>
+            </div>
+            <div class="booking-detail">
+              <div class="booking-detail__value"><span>✓</span> All Incl.</div>
+              <div class="booking-detail__label">Safety Gear</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================================================
+       FOOTER
+  ================================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__top">
+
+        <!-- Brand column -->
+        <div class="footer__brand">
+          <div class="footer__brand-logo">
+            <div class="footer__brand-logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+                <path d="M2 13 C4 11 7 9 10 11 C13 13 16 11 18 9 L18 14 C16 16 13 14 10 12 C7 10 4 12 2 14 Z"/>
+              </svg>
+            </div>
+            <span class="footer__brand-name">Altai Jet Boat</span>
+          </div>
+          <p class="footer__brand-desc">
+            Premium jet boat adventures through the wild rivers and
+            pristine landscapes of the Altai Mountains, Russia.
+          </p>
+          <div class="footer__socials">
+            <!-- TODO: Replace # with your actual social media profile URLs -->
+            <a href="#" class="footer__social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24">
+                <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Telegram">
+              <svg viewBox="0 0 24 24">
+                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+              </svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="VKontakte">
+              <svg viewBox="0 0 24 24">
+                <path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .373.17.508.271.508.22 0 .407-.135.813-.542 1.27-1.422 2.17-3.607 2.17-3.607.119-.254.322-.491.762-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.202 1.253.745.847 1.32 1.558 1.473 2.049.17.491-.085.745-.576.745z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation columns -->
+        <div class="footer__col">
+          <h3 class="footer__col-title">Adventures</h3>
+          <nav class="footer__nav" aria-label="Adventures navigation">
+            <a href="#routes">Katun River Classic</a>
+            <a href="#routes">Chuya Rapids Rush</a>
+            <a href="#routes">Deep Altai Expedition</a>
+            <a href="#routes">Private Charter</a>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__col-title">Company</h3>
+          <nav class="footer__nav" aria-label="Company navigation">
+            <a href="#about">About Us</a>
+            <a href="#experience">Our Boats</a>
+            <a href="#gallery">Gallery</a>
+            <!-- TODO: Link to actual blog/news page if available -->
+            <a href="#">Blog</a>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h3 class="footer__col-title">Contact</h3>
+          <nav class="footer__nav" aria-label="Contact information">
+            <!-- TODO: Replace with actual contact details -->
+            <a href="mailto:info@altaijetboat.ru">info@altaijetboat.ru</a>
+            <a href="tel:+73852000000">+7 (385) 200-00-00</a>
+            <a href="#">Gorno-Altaysk, Russia</a>
+            <a href="#booking">Book a Trip</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          &copy; <span id="footer-year">2024</span> Altai Jet Boat. All rights reserved.
+        </p>
+        <nav class="footer__legal" aria-label="Legal navigation">
+          <!-- TODO: Add actual policy pages when available -->
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Update copyright year automatically
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
