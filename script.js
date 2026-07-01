@@ -109,6 +109,15 @@
   }, { passive: true });
 
   /* ----------------------------------------------------------------
+     UTILITY — validate a URL is safe (https or protocol-relative)
+  ---------------------------------------------------------------- */
+  function isSafeUrl(url) {
+    if (typeof url !== 'string') return false;
+    // Only allow https:// and protocol-relative //
+    return /^https:\/\//i.test(url) || /^\/\//i.test(url);
+  }
+
+  /* ----------------------------------------------------------------
      4. VIDEO PLAY BUTTON — poster → play
   ---------------------------------------------------------------- */
   function initVideoEmbeds() {
@@ -123,12 +132,14 @@
         embed.classList.add('playing');
 
         if (iframe) {
-          // Append autoplay param to src
+          // Append autoplay param to src — validate URL before assigning
           var src = iframe.getAttribute('data-src') || iframe.src;
-          if (src && src.indexOf('autoplay') === -1) {
-            src += (src.indexOf('?') > -1 ? '&' : '?') + 'autoplay=1';
+          if (src && isSafeUrl(src)) {
+            if (src.indexOf('autoplay') === -1) {
+              src += (src.indexOf('?') > -1 ? '&' : '?') + 'autoplay=1';
+            }
+            iframe.src = src;
           }
-          iframe.src = src;
         }
 
         if (video) {
@@ -166,7 +177,10 @@
     if ('loading' in HTMLImageElement.prototype) {
       // Native lazy loading: swap data-src to src
       document.querySelectorAll('img[data-src]').forEach(function (img) {
-        img.src = img.getAttribute('data-src');
+        var dataSrc = img.getAttribute('data-src');
+        if (dataSrc && isSafeUrl(dataSrc)) {
+          img.src = dataSrc;
+        }
         img.removeAttribute('data-src');
         img.loading = 'lazy';
       });
@@ -174,7 +188,10 @@
       // Fallback: IntersectionObserver-based lazy load
       if (!('IntersectionObserver' in window)) {
         document.querySelectorAll('img[data-src]').forEach(function (img) {
-          img.src = img.getAttribute('data-src');
+          var dataSrc = img.getAttribute('data-src');
+          if (dataSrc && isSafeUrl(dataSrc)) {
+            img.src = dataSrc;
+          }
         });
         return;
       }
@@ -182,7 +199,10 @@
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             var img = entry.target;
-            img.src = img.getAttribute('data-src');
+            var dataSrc = img.getAttribute('data-src');
+            if (dataSrc && isSafeUrl(dataSrc)) {
+              img.src = dataSrc;
+            }
             img.removeAttribute('data-src');
             obs.unobserve(img);
           }
